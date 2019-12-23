@@ -1,0 +1,8 @@
+0, 此库只能用在win下, 并且代码以及宏定义全部来自win c/c++
+1, 为了防止有些用户没有win c/c++的环境, 我已经编译好了一个库放在./lib下, 可以直接调用
+2, 如果自己想编译的话, 确保c/c++环境, 然后删除./lib/libwindevice.a, 进入到./cdep目录
+执行以下命令后, 移动到../lib目录下:
+        a) gcc -Wall -c windevice.c
+        b) ar -rv libwindevice.a windevice.o
+3, 例子可以看下./exam/main/main.go
+
