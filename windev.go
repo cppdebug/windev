@@ -6,14 +6,17 @@ package windev
 */
 import "C"
 
-func KeyDownUp(e C.int) C.int{
+// KeyDownUp ..
+func KeyDownUp(e int) C.int{
 	return C.keyDownUp(C.int(e))
 }
 
-func SetCursorPos(x, y C.int) C.bool{
+// SetCursorPos ..
+func SetCursorPos(x, y int) C.bool{
 	return C.setCursorPos(C.int(x), C.int(y))
 }
 
-func MouseEvent(dwFlags, dx, dy, dwData C.int, dwExtraInfo C.longlong) {
+// MouseEvent ..
+func MouseEvent(dwFlags, dx, dy, dwData int, dwExtraInfo int64) {
 	C.mouseEvent(C.int(dwFlags), C.int(dx), C.int(dy), C.int(dwData), C.longlong(dwExtraInfo))
 }
